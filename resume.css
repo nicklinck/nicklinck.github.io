@@ -1,0 +1,11 @@
+
+
+.image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image img{
+	border:1px solid gray;
+}

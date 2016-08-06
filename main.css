@@ -1,0 +1,54 @@
+
+header {
+	padding: 40px;
+	font-family: 'Lato','Trebuchet MS', sans-serif;
+}
+
+header .row{
+	display: flex;
+	align-items: center;
+	min-width: 90%;
+	padding: 20px;
+	border: 2px solid black;
+}
+
+header nav{
+	display: inline-flex;
+	justify-content: flex-end;
+	font-family: 'Trebuchet MS';
+}
+
+header h1{
+	margin: 0;
+}
+
+header p{
+	padding: 0 20px;
+	margin: 0;
+	font-size: 17px;
+}
+
+nav p a:link{
+	text-decoration: none;
+	color: black;
+}
+
+nav p a:visited{
+	color: black;
+}
+
+nav p a:hover{
+	color: gray;
+}
+
+nav p a:active{
+	color: white;
+}
+
+p {
+	text-align: center;
+	font-family: 'Lato','Trebuchet MS', sans-serif;
+}
+
+
+
