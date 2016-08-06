@@ -1,54 +1,38 @@
 
-header {
-	padding: 40px;
-	font-family: 'Lato','Trebuchet MS', sans-serif;
+.header {
+	font-family: 'Open Sans', 'Lato','Trebuchet MS', sans-serif;
+	position: relative;
+	left: 10%;
 }
 
-header .row{
-	display: flex;
-	align-items: center;
-	min-width: 90%;
-	padding: 20px;
-	border: 2px solid black;
-}
-
-header nav{
+.nav{
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	position: absolute;
+	left:10%;
+	right:10%;
+	min-width: 80%;
 	display: inline-flex;
-	justify-content: flex-end;
+	justify-content: space-around;
+	align-items: center;
 	font-family: 'Trebuchet MS';
+
 }
 
-header h1{
-	margin: 0;
-}
-
-header p{
-	padding: 0 20px;
-	margin: 0;
-	font-size: 17px;
-}
-
-nav p a:link{
+.nav h2 a:link{
 	text-decoration: none;
 	color: black;
 }
 
-nav p a:visited{
+.nav h2 a:visited{
 	color: black;
 }
 
-nav p a:hover{
+.nav h2 a:hover{
 	color: gray;
 }
 
-nav p a:active{
+.nav h2 a:active{
 	color: white;
 }
-
-p {
-	text-align: center;
-	font-family: 'Lato','Trebuchet MS', sans-serif;
-}
-
-
 
