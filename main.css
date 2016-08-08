@@ -27,7 +27,7 @@ header {
 .slider {
 	position: relative;
   	width: 100%;
-  	height: 470px;
+  	height: 450px;
 }
 
 .slide {
@@ -49,7 +49,7 @@ header {
 }
 
 .firstSlide {
-	background-image: url('resources/lake.JPG');
+	background-image: url('resources/mainSlide.png');
 	background-size: cover;
 	position: absolute;
   	top: 0;
@@ -68,9 +68,49 @@ header {
 	height: 100%;
 }
 
+.thirdSlide {
+	background-image: url('resources/football.JPG');
+	background-size: cover;
+	position: absolute;
+  	top: 0;
+  	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/*navigation*/
 .rightArrow {
+	position: relative;
+	top: 4px;
 	width: 20px;
 	height: 20px;
+	opacity: .9;
+}
+
+.leftArrow {
+	position: relative;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	z-index: 9999;
+	opacity: .9;
+}
+
+.bullets {
+	opacity: .9;
+	text-align: center;
+	top: 400px;
+	position: relative;
+	text-shadow: 0 0 25px white;
+}
+
+.bullets li {
+	display: inline-block;
+}
+
+.currentBullet {
+	color: black;
+	opacity: .5;
 }
 
 

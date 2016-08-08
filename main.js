@@ -1,6 +1,6 @@
 var main = function(){
     
-	$('.slider').click(function(){
+	$('.rightArrow').click(function(){
 		var currentSlide = $('.currentSlide');
 	    var nextSlide = currentSlide.next();
 
@@ -13,7 +13,20 @@ var main = function(){
 
 	});
 
-	
+	$('.leftArrow').click(function(){
+		var currentSlide = $('.currentSlide');
+	    var nextSlide = currentSlide.prev();
+
+	    if(nextSlide.length === 0) {
+	      nextSlide = $('.slide').last();
+	    }
+	    
+	    currentSlide.fadeOut(600).removeClass('currentSlide');
+	    nextSlide.fadeIn(600).addClass('currentSlide');
+
+	});	
+
+
 
 };
 
