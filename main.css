@@ -1,18 +1,45 @@
 
+* {
+	margin: 0;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
+}
+
+body > div {
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 #wrap {
     min-height: 100%;
-    position: relative;
+    margin-bottom: -50px;
+}
+
+#wrap:after {
+	content: "";
+	display: block;
+}
+
+#footer, #wrap:after {
+	height: 50px;
 }
 
 body {
-    padding: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
+    overflow: auto;
+}
+
+/*footer information*/
+#footer {
+
+	text-align: center;
+	background-color: rgb(200, 200, 200);
+	width: 100%;
+	height: 50px;
+	opacity: .7;
 }
 
 /*header information*/
@@ -30,13 +57,13 @@ header {
 
 .webLinks li {
 	display: inline-block;
+	padding-top: 15px;
 }
 
 .webLinks li img {
 	width: 30px;
 	height: 30px;
 }
-
 
 
 /*slider information*/
@@ -129,25 +156,10 @@ header {
 	opacity: .5;
 }
 
-
-/*footer information*/
-#footer {
-	position: absolute;
-    bottom: 0;
-	text-align: center;
-	/*margin-top: 10px;
-/*  margin-top: -50px;*/
-    /*clear: both;
-	bottom: 0;*/
-	background-color: rgb(200, 200, 200);
-	width: 100%;
-	height: 50px;
-	opacity: .7;
-}
-
 .nav{
 	border-bottom: 1px solid black;
 	border-top: 1px solid black;
+	padding: 10px;
 	position: relative;
 	left:10%;
 	right:10%;
