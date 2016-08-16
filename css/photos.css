@@ -5,6 +5,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+    bottom: 160px;
 }
 
 .images img{
@@ -15,4 +17,7 @@
 	margin-top: 100px;
 }
 
+.nav {
+	bottom: 142px;
+}
 

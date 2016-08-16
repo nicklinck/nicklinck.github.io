@@ -1,8 +1,15 @@
 .resumeContainer {
 	margin: auto;
 	width: 820px;
+	position: relative;
+    bottom: 130px;
+
 }
 
 #resume {
 	width: 100%;
+}
+
+.nav {
+	bottom: 142px;
 }

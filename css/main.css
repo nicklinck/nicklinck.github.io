@@ -56,28 +56,49 @@ header {
 	z-index: 9999;
 }
 
+.leftHeader {
+	width: 1000px;
+	height: 64px;
+}
+
+#topRectangle {
+	display: inline;
+	float: left;
+	left: 2%;
+    position: relative;
+}
+
 #topName {
 	display: inline;
-	position: relative;
-	bottom: 14px;
-	font-family: 'Trebuchet MS';
-	color: rgb(60, 60, 60);
-	font-size: 22px;
+    position: relative;
+    bottom: 107px;
+    margin-right: 720px;
+    font-family: 'Trebuchet MS';
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    float: right;
 }
 
 #circleMe {
-	height: 40px;
-	width: 62px;
-	display: inline;
-	padding-top: 15px;
-	padding-left: 10%;
-}	
+    z-index: 9999;
+    height: 48px;
+    width: 74px;
+    display: inline;
+    padding-top: 15px;
+    padding-left: 10%;
+    float: right;
+    position: relative;
+    margin-right: 830px;
+    bottom: 71px;
+}
 
 .webLinks {
-	display: inline;
-	position: relative;
-	left: 56%;
-}
+	z-index: 9999;
+    display: inline;
+    position: relative;
+    bottom: 150px;
+    float: right;
+    right: 7%;}
 
 .webLinks li {
 	display: inline-block;
