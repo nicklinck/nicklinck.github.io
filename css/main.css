@@ -8,8 +8,12 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    background-color: rgba(106, 157, 214, .13);
+}
+
 /*
-html, body {
+html, body {0
     height: 100%;    
 }
 
@@ -49,8 +53,7 @@ body {
 
 /*header information*/
 header {
-	background-color: white;
-	border-bottom: 1px solid black;
+    border-bottom: 4px solid rgb(255,200,110);
 	width: 100%;
 	height: 64px;
 	z-index: 9999;
@@ -204,8 +207,7 @@ header {
 }
 
 .nav{
-	border-bottom: 1px solid black;
-	border-top: 1px solid black;
+	border-top: 4px solid rgb(255,200,110);
 	height: 43px;
 	position: relative;
 	width: 100%;
@@ -236,7 +238,16 @@ header {
 .mainTextContainer {
 	margin-left: 100px;
     margin-right: 100px;
-    margin-top: 20px;
+    margin-top: 45px;
+    padding-right: 50px;
+    background-color: rgba(106, 157, 214, .4);
+    padding-left: 50px;
+    padding-bottom: 37px;
+    padding-top: 10px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: 5px solid rgb(255,200,110);
 }
 
 .mainText {
@@ -244,6 +255,7 @@ header {
 	width: 100%;
 	font-family: 'Consolas', 'Monaco', 'Trebuchet MS';
 	word-wrap: break-word;
+    color: rgb(60, 60, 60);
 }
 
 #blankSpace {

@@ -1,9 +1,14 @@
 .resumeContainer {
 	margin: auto;
-	width: 820px;
-	position: relative;
+    margin-top: 20px;
+    width: 820px;
+    position: relative;
     bottom: 130px;
-
+    padding: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(106, 157, 214, .13);
 }
 
 #resume {
