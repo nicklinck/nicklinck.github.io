@@ -2,3 +2,9 @@
 .nav {
 	bottom: 142px;
 }
+
+.contactContainer {
+	width: 100%;
+	margin: auto;
+	padding-left: 42%;
+}

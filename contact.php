@@ -6,7 +6,7 @@
 <body>
     <?php 
 
-    	echo "<h1> Hello " . $_POST["email"] . "</h1>"; 
+    	echo "<h1> Hello " . $_GET["email"] . "</h1>"; 
 
     ?>
 </body>
