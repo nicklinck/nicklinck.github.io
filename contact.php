@@ -4,6 +4,10 @@
 
 </head>
 <body>
-    <?php echo hey?>
+    <?php 
+
+    	echo "<h1> Hello " . $_POST["email"] . "</h1>"; 
+
+    ?>
 </body>
 </html>
