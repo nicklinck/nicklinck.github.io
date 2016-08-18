@@ -9,6 +9,7 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     background-color: rgba(106, 157, 214, .13);
+    border-left: 5px solid rgb(230, 165, 138);
 }
 
 #resume {
@@ -16,5 +17,5 @@
 }
 
 .nav {
-	bottom: 142px;
+	bottom: 150px;
 }
