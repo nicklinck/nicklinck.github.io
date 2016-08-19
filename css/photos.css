@@ -31,3 +31,10 @@
 	bottom: 153px;
 }
 
+#blurb {
+	text-align: center;
+	color: rgb(75, 75, 75);
+	position: relative;
+	bottom: 120px;
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+}
