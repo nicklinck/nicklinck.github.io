@@ -11,24 +11,30 @@
 }
 
 .images{
-	display:flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	position: relative;
-    bottom: 160px;
+	top: 0px;
+
 }
 
 .images img{
 	margin-top: 40px;
+    width: 700px;
+    height: auto;
+    display: block;
+    left: 50%;
+    position: relative;
+    margin-left: -350px;
 }
 
 #top {
-	margin-top: 100px;
+	vertical-align: middle;
 }
 
 .nav {
 	bottom: 153px;
+	z-index: 9999;
 }
 
 #blurb {
@@ -37,4 +43,5 @@
 	position: relative;
 	bottom: 120px;
 	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+	margin-top: 200px;
 }
