@@ -6,6 +6,7 @@
 html {
 	max-width: 100%;
     overflow-x: hidden;
+    min-width: 970px;
 }
 
 body {
@@ -45,15 +46,6 @@ header {
 	height: 64px;
 }
 
-/*#topRectangle {
-	display: inline;
-    float: left;
-    left: 2%;
-    position: relative;
-    height: 45px;
-    width: 460px;
-}*/
-
 #topName {
 	display: inline;
     position: relative;
@@ -68,7 +60,8 @@ header {
 
 #circleMe {
     z-index: 9999;
-    width: 60px;
+    width: 40px;
+    height: 40px;
     display: inline;
     padding-top: 15px;
     right: 21px;
@@ -82,7 +75,7 @@ header {
 	z-index: 9999;
     display: inline;
     position: relative;
-    bottom: 96px;
+    bottom: 95px;
     float: right;
     right: 7%;
 }
@@ -94,8 +87,8 @@ header {
 }
 
 .webLinks li img {
-	width: 40px;
-	height: 40px;
+	width: 37px;
+	height: 37px;
 }
 
 
@@ -123,16 +116,22 @@ header {
 }
 
 #mainPicture {
-    width: 600px;
     position: relative;
     left: 10%;
     top: 52px;
 }
 
+#mainPicture tr td img {
+	width: 91px;
+	height: 400px;
+}
+
 #mainCircles {
 	width: 700px;
+	height: 467px;
     position: absolute;
     right: -7%;
+    top: 0;x
 }
 
 .currentSlide {
