@@ -32,11 +32,6 @@
 	vertical-align: middle;
 }
 
-.nav {
-	bottom: 153px;
-	z-index: 9999;
-}
-
 #blurb {
 	text-align: center;
 	color: rgb(75, 75, 75);
