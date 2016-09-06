@@ -5,12 +5,13 @@
 
 .folders {
     width: 300px;
+    float: left;
     position: relative;
     left: 5%;
     top: 60px;
 }
 
-.images{
+.mainImage {
 	justify-content: center;
 	align-items: center;
 	position: relative;
@@ -18,7 +19,7 @@
 
 }
 
-.images img{
+.mainImage img{
 	margin-top: 40px;
     width: 700px;
     height: auto;
@@ -26,6 +27,17 @@
     left: 50%;
     position: relative;
     margin-left: -350px;
+}
+
+.imageNav {
+	margin: auto;
+	text-align: center;
+	width: 900px;
+	height: 300px;
+}
+
+.imageNav img {
+	width: 75px;
 }
 
 #top {

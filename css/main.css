@@ -6,7 +6,7 @@
 html {
 	max-width: 100%;
     overflow-x: hidden;
-    min-width: 970px;
+    min-width: 1301px;
 }
 
 body {
@@ -143,6 +143,7 @@ header {
 }
 
 .firstSlide {
+	/*background-image: url('../resources/DSC_0163.JPG');*/
 	background-color: rgb(255, 207, 129);
 	background-size: cover;
 	border-bottom: 1px solid black;
@@ -233,7 +234,7 @@ header {
 }
 
 #current {
-	color: rgb(106, 157, 214)
+	color: rgb(150, 192, 240);
 }
 
 .nav p a:link{

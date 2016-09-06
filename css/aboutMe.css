@@ -1,0 +1,194 @@
+
+.nav {
+	margin-bottom: 75px;
+}
+
+.tennis {
+	margin-bottom: 100px;
+    width: 58%;
+    margin-left: 7.5%;
+    margin-right: 20%;
+    padding: 30px;
+    padding-right: 150px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(106, 157, 214, .4);
+    border-left: 5px solid rgb(255, 207, 129);
+}
+
+#tennisImg {
+	width: 314px;
+    height: 314px;
+    display: inline;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: rgb(255, 207, 129) solid 4px;
+    float: right;
+    position: relative;
+    right: 5.5%;
+    bottom: 373px;
+}
+
+.tennisText {
+	float: left;
+	display: inline;
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+	color: rgb(60, 60, 60);
+}
+
+.swim {
+    width: 56%;
+    padding-left: 500px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: 8%;
+    padding: 30px;
+    padding-left: 200px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: rgba(106, 157, 214, .4);
+    border-right: 5px solid rgb(255, 207, 129);
+}
+
+#swimImg {
+	width: 314px;
+	height: 314px;
+    display: inline;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: rgb(255, 207, 129) solid 4px;
+    position: relative;
+    bottom: 293px;
+    left: 7.5%;
+}
+
+.swimText {
+	position: relative;
+    bottom: 295px;
+    float: right;
+    display: inline;
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+    color: rgb(60, 60, 60);
+}
+
+.photography {
+	position: relative;
+    bottom: 222px;
+    margin-bottom: 100px;
+    width: 57%;
+    height: 192px;
+    margin-left: 7.5%;
+    margin-right: 20%;
+    padding: 30px;
+    padding-right: 150px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(106, 157, 214, .4);
+    border-left: 5px solid rgb(255, 207, 129);
+}
+
+#photoImg {
+	width: 314px;
+    height: 314px;
+    display: inline;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: rgb(255, 207, 129) solid 4px;
+    float: right;
+    position: relative;
+    right: 5.5%;
+    bottom: 608px;
+}
+
+.photoText {
+	float: left;
+	display: inline;
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+	color: rgb(60, 60, 60);
+}
+
+.camping {
+    width: 56%;
+    padding-left: 500px;
+    height: 210px;
+    margin-left: auto;
+    margin-right: 8%;
+    padding: 30px;
+    padding-left: 200px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: rgba(106, 157, 214, .4);
+    border-right: 5px solid rgb(255, 207, 129);
+    position: relative;
+    bottom: 219px;
+
+}
+
+#campingImg {
+	width: 314px;
+	height: 314px;
+    display: inline;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: rgb(255, 207, 129) solid 4px;
+    position: relative;
+    bottom: 515px;
+    left: 7.5%;
+}
+
+.campingText {
+	position: relative;
+    bottom: 295px;
+    float: right;
+    display: inline;
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+    color: rgb(60, 60, 60);
+}
+
+.intramural {
+	position: relative;
+    bottom: 442px;
+    margin-bottom: -300px;
+    width: 57%;
+    height: 237px;
+    margin-left: 7.5%;
+    margin-right: 20%;
+    padding: 30px;
+    padding-right: 150px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(106, 157, 214, .4);
+    border-left: 5px solid rgb(255, 207, 129);
+}
+
+#intramuralImg {
+	width: 314px;
+    height: 314px;
+    display: inline;
+    margin-right: 30px;
+    border-radius: 50%;
+    border: rgb(255, 207, 129) solid 4px;
+    float: right;
+    position: relative;
+    right: 5.5%;
+    bottom: 444px;
+    margin-bottom: -700px
+}
+
+.intramuralText {
+	display: inline;
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+	color: rgb(60, 60, 60);
+}
+
+#blurb {
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+	color: rgb(60, 60, 60);
+	text-align: center;
+}
+
