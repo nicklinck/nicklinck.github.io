@@ -5,6 +5,8 @@
     <title>Nick Linck</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/photos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../javaScript/photos.js"></script>
     <link rel="icon" href="../resources/icon.png">
 </head>
 
@@ -27,22 +29,110 @@
 <body>
     <div class="nav">
         <p><a href="../index.html">Home</a></p>
+        <p><a href="aboutMe.html">About Me</a></p>
         <p><a href="resume.html">Resume</a></p>
         <p><a href="photos.html" id="current">Photos</a></p>
         <p><a href="mailto:linckn@umich.edu">Contact Me</a></p>
     </div>
 
-	<div class="images">
-		<img id ="top" src="../resources/DSC_0268.JPG" width =50% height=auto/>
-        <img src="../resources/DSC_0225.JPG" width =50% height=auto/>
-		<img src="../resources/DSC_0127.JPG" width =50% height=auto/>
-        <img src="../resources/DSC_1053.JPG" width =50% height=auto/>
-        <img src="../resources/DSC_0987.JPG" width =50% height=auto/>
-		<img src="../resources/football3.JPG" width =50% height=auto/>
-		<img src="../resources/basketball.JPG" width =50% height=auto/>
-	</div>
+    <div class="both">
+    <div class="folders">
+        <h2>Categories</h2>
+        <p id="studyAbroadButton" class="currentFolder"><img class="rightArrowNav" src="../resources/rightArrow2.png"/>Study Abroad</p>
+        <p id="footballButton">Football</p>
+        <p id="basketballButton">Basketball</p>
+        <p id="natureButton">Nature</p>
+        <p id="peopleButton">People</p>
+    </div>
+
+    <div class="photoContainer">
+        <div class="currentContainer" id="studyAbroad">
+            <div class="mainImage">
+        		<img class="currentImages" src="../resources/studyAbroad/barca3.JPG"/>
+        	</div>
+
+            <div class="imageNav">
+                <img class="leftArrowPhoto" src="../resources/leftArrowBlack.png"/>
+                <img class="currentImage" src="../resources/studyAbroad/barca3.JPG"/>
+                <img src="../resources/studyAbroad/barca1.JPG"/>   
+                <img src="../resources/studyAbroad/lisbon1.JPG"/>             
+                <img src="../resources/studyAbroad/biarritz3.JPG"/>
+                <img src="../resources/studyAbroad/san1.jpg"/>
+                <img src="../resources/studyAbroad/granada3.JPG"/>
+                <img class="rightArrowPhoto" src="../resources/rightArrowBlack.png"/>
+            </div>
+        </div>
+
+        <div id="football">
+            <div class="mainImage">
+                <img class="currentImages" src="../resources/football/football4.JPG"/>
+            </div>
+
+            <div class="imageNav">
+                <img class="leftArrowPhoto" src="../resources/leftArrowBlack.png"/>
+                <img class="currentImage" src="../resources/football/football4.JPG"/>
+                <img src="../resources/football/football1.JPG"/>
+                <img src="../resources/football/football2.JPG"/>
+                <img src="../resources/football/football3.JPG"/>
+                <img src="../resources/football/football5.JPG"/>
+                <img src="../resources/football/football6.JPG"/>
+                <img class="rightArrowPhoto" src="../resources/rightArrowBlack.png"/>
+            </div>
+        </div>
+
+        <div id="basketball">
+            <div class="mainImage">
+                <img class="currentImages" src="../resources/basketball/basketball.JPG"/>
+            </div>
+
+            <div class="imageNav">
+                <img class="leftArrowPhoto" src="../resources/leftArrowBlack.png"/>
+                <img class="currentImage" src="../resources/basketball/basketball.JPG"/>
+                <img src="../resources/basketball/basketball1.jpg"/>
+                <img src="../resources/basketball/basketball2.JPG"/>
+                <img src="../resources/basketball/basketball3.JPG"/>
+                <img src="../resources/basketball/basketball4.JPG"/>
+                <img class="rightArrowPhoto" src="../resources/rightArrowBlack.png"/>
+            </div>
+        </div>
+
+        <div id="nature">
+            <div class="mainImage">
+                <img class="currentImages" src="../resources/nature/nature1.JPG"/>
+            </div>
+
+            <div class="imageNav">
+                <img class="leftArrowPhoto" src="../resources/leftArrowBlack.png"/>
+                <img class="currentImage" src="../resources/nature/nature1.JPG"/>
+                <img src="../resources/nature/nature2.JPG"/>
+                <img src="../resources/nature/nature3.JPG"/>
+                <img src="../resources/nature/nature4.JPG"/>
+                <img src="../resources/nature/nature5.jpg"/>
+                <img src="../resources/nature/nature6.JPG"/>
+                <img class="rightArrowPhoto" src="../resources/rightArrowBlack.png"/>
+            </div>
+        </div>
+
+        <div id="people">
+            <div class="mainImage">
+                <img class="currentImages" src="../resources/people/people1.JPG"/>
+            </div>
+
+            <div class="imageNav">
+                <img class="leftArrowPhoto" src="../resources/leftArrowBlack.png"/>
+                <img class="currentImage" src="../resources/people/people1.JPG"/>
+                <img src="../resources/people/people2.JPG"/>
+                <img src="../resources/people/people3.jpg"/>
+                <img src="../resources/people/people4.jpg"/>
+                <img src="../resources/people/people5.jpg"/>
+                <img src="../resources/people/people6.JPG"/>
+                <img class="rightArrowPhoto" src="../resources/rightArrowBlack.png"/>
+            </div>
+        </div>
+    </div>
 
     <p id="blurb"> more photos comming soon! </p>
+    </div>
 
 </body>
 

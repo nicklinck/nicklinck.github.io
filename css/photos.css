@@ -1,32 +1,97 @@
+.both {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
 .photoContainer{
 	position: relative;
 	width: 100%;
 }
 
+.rightArrowNav {
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 1px;
+    right: 5px;
+}
+
 .folders {
-    width: 300px;
+	margin-top: 99px;
+    width: 240px;
+    height: 398px;
     float: left;
     position: relative;
     left: 5%;
-    top: 60px;
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+    color: rgb(75, 75, 75);
+    font-size: 25px;
+    border-right: 1px solid rgb(75, 75, 75)
 }
 
-.images {
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	top: 0px;
-
+.folders h2 {
+	padding-bottom: 4px;
 }
 
-.images img{
-	margin-top: 40px;
-    width: 700px;
-    height: auto;
+.folders p {
     display: block;
-    left: 50%;
+    color: rgb(75, 75, 75);
+    padding: 5px;
+    margin-left: 36px;
+    padding: 0!important;
+    font: inherit;
+    margin-bottom: 7px;
+}
+
+.folders button {
+    display: block;
+    color: rgb(75, 75, 75);
+    padding: 5px;
+    margin-left: 36px;
+    padding: 0!important;
+    font: inherit;
+    margin-bottom: 7px;
+}
+
+.currentFolder {
+	position: relative;
+    right: 22px;
+}
+
+#football {
+	display: none;
+}
+
+#basketball {
+    display: none;
+}
+
+#nature {
+    display: none;
+}
+
+#people {
+    display: none;
+}
+
+.mainImage {
+    float: right;
     position: relative;
-    margin-left: -350px;
+    margin-top: 100px;
+    margin-right: 151px;
+}
+
+.mainImage img {
+	vertical-align: middle;
+	width: 600px;
+    height: 400px;
+}
+
+.currentImage {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    box-shadow: 0 0 10px black;
 }
 
 .imageNav {
@@ -34,14 +99,19 @@
 	text-align: center;
 	width: 900px;
 	height: 300px;
+	clear: both;
+	margin-top: 40px;
+    float: right;
 }
 
 .imageNav img {
 	width: 75px;
+    height: 50px;
 }
 
-#top {
-	vertical-align: middle;
+.leftArrowPhoto, .rightArrowPhoto {
+	height: 50px;
+    width: 50px;
 }
 
 #blurb {
@@ -51,4 +121,9 @@
 	bottom: 120px;
 	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
 	margin-top: 200px;
+	clear: both;
+}
+
+#footer{
+	clear: both;
 }

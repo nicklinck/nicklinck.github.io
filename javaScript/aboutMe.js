@@ -2,19 +2,13 @@ var main = function(){
     
 	$(function() {
 	    var div = $('.tennis');
-	    var width = (1/div.width()) * 100000 + 70;
+	    var newHeight = (1/div.width()) * 100000 + 70;
 
-	    div.css('height', width);
-
-
-/*	    $("p.tennisText").css("width", "100px");
-
-	    var paragraph = $("p.tennisText");
-	    var pWidth = '100px';
-	    paragraph.style.width = pWidth;
-	    /*paragraph.css('width', pWidth);
-	    
-	    document.getElementById("myBtn").style.width*/
+	    div.css('height', newHeight);
+	    $('.swim').css('height', newHeight - 20);
+	    $('.photography').css('height', newHeight);
+	    $('.camping').css('height', newHeight);
+	    $('.intramural').css('height', newHeight + 25);
 
 	});
 

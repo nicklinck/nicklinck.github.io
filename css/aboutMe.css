@@ -40,7 +40,7 @@
 .swim {
     width: 56%;
     padding-left: 500px;
-    height: 210px;
+    height: 190px;
     margin-left: auto;
     margin-right: 8%;
     padding: 30px;
@@ -60,7 +60,7 @@
     border-radius: 50%;
     border: rgb(255, 207, 129) solid 4px;
     position: relative;
-    bottom: 293px;
+    bottom: 280px;
     left: 7.5%;
 }
 

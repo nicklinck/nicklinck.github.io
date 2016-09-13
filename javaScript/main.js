@@ -1,5 +1,4 @@
 var main = function(){
-    
 
     // go through pictures on slide bar
 	$('.rightArrow').click(function(){
