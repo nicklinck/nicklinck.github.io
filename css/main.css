@@ -1,4 +1,10 @@
 
+.me {
+	position: relative;
+    top: 50px;
+    left: 8%;
+}
+
 * {
 	margin: 0;
 }
@@ -143,7 +149,7 @@ header {
 }
 
 .firstSlide {
-	/*background-image: url('../resources/DSC_0163.JPG');*/
+	background-image: url('../resources/wood5.jpg');
 	background-color: rgb(255, 207, 129);
 	background-size: cover;
 	border-bottom: 1px solid black;
@@ -266,7 +272,7 @@ header {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-left: 5px solid rgb(255, 207, 129);
+    border-left: 5px solid #356cac; /*rgb(255, 207, 129)*/
 }
 
 .mainText h1 {

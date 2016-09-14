@@ -104,14 +104,21 @@
     float: right;
 }
 
+.leftArrowPhoto, .rightArrowPhoto {
+    height: 35px !important;
+    width: 35px !important;
+    padding: 8px;
+}
+
+.leftArrowPhoto {
+    -ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg); 
+    transform: rotate(180deg);
+}
+
 .imageNav img {
 	width: 75px;
     height: 50px;
-}
-
-.leftArrowPhoto, .rightArrowPhoto {
-	height: 50px;
-    width: 50px;
 }
 
 #blurb {
