@@ -5,10 +5,11 @@
     width: 820px;
     position: relative;
     padding: 30px;
+    padding-bottom: 0px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    background-color: rgba(106, 157, 214, .13);
+    background-color: rgba(210, 224, 242, 1);
     border-left: 5px solid #356cac;
 }
 
