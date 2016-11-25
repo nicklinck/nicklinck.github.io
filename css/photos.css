@@ -24,7 +24,7 @@
     float: left;
     position: relative;
     left: 5%;
-    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Helvetica';
     color: rgb(75, 75, 75);
     font-size: 25px;
     border-right: 1px solid rgb(75, 75, 75)
@@ -126,7 +126,7 @@
 	color: rgb(75, 75, 75);
 	position: relative;
 	bottom: 120px;
-	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Helvetica';
 	margin-top: 200px;
 	clear: both;
 }

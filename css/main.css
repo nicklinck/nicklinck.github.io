@@ -236,7 +236,7 @@ header {
 	display: inline-flex;
 	justify-content: space-around;
 	align-items: center;
-	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica';
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Helvetica';
 	background-color: rgb(75, 75, 75);
 	font-size: 26px;
 }
@@ -263,14 +263,15 @@ header {
 }
 
 .mainTextContainer {
-	margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 45px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
     padding-right: 50px;
+    max-width: 1200px; 
     background-color: rgba(106, 157, 214, .4);
     padding-left: 50px;
     padding-bottom: 37px;
-    padding-top: 10px;
+    padding-top: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -288,7 +289,7 @@ header {
 .mainText p {
 	position: relative;
 	width: 100%;
-	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Trebuchet MS';
 	word-wrap: break-word;
     color: rgb(60, 60, 60);
 }
@@ -298,7 +299,7 @@ header {
 }
 
 #footer {
-    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Helvetica', 'Consolas', 'Monaco', 'Trebuchet MS';
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Trebuchet MS';
     text-align: center;
     background-color: rgb(75, 75, 75);
     width: 100%;
