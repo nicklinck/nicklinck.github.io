@@ -68,7 +68,7 @@
     border-radius: 50%;
     border: #70aaed solid 4px;
     position: relative;
-    bottom: 220px;
+    bottom: 260px;
     right: 340px;
 
 }
@@ -86,7 +86,7 @@
     margin-bottom: 340px;
     width: 50%;
     max-width: 776px;
-    height: 192px;
+    height: 210px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
@@ -107,7 +107,7 @@
     float: right;
     position: relative;
     left: 330px;
-    bottom: 238px;
+    bottom: 270px;
 }
 
 .photoText {
