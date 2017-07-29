@@ -18,6 +18,7 @@
     border-bottom-right-radius: 90px;
     background-color: rgba(106, 157, 214, .4);
     border-left: 5px solid #8db3df;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #tennisImg {
@@ -30,6 +31,7 @@
     position: relative;
     left: 340px;
     bottom: 259px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .tennisText {
@@ -59,6 +61,7 @@
     border-bottom-left-radius: 40px;
     background-color: rgba(106, 157, 214, .4);
     border-right: 5px solid #70aaed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #swimImg {
@@ -70,7 +73,7 @@
     position: relative;
     bottom: 260px;
     right: 340px;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .swimText {
@@ -96,6 +99,7 @@
     border-bottom-right-radius: 90px;
     background-color: rgba(106, 157, 214, .4);
     border-left: 5px solid rgb(77, 133, 197);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #photoImg {
@@ -108,6 +112,7 @@
     position: relative;
     left: 330px;
     bottom: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .photoText {
@@ -134,6 +139,7 @@
     bottom: 219px;
     max-width: 776px;
     margin-bottom: 340px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #campingImg {
@@ -146,6 +152,7 @@
     bottom: 259px;
     right: 340px;
     float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .campingText {
@@ -162,7 +169,7 @@
     margin-bottom: -300px;
     width: 50%;
     max-width: 776px;
-    height: 237px;
+    height: 247px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
@@ -172,6 +179,7 @@
     border-bottom-right-radius: 90px;
     background-color: rgba(106, 157, 214, .4);
     border-left: 5px solid #235693;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #intramuralImg {
@@ -182,9 +190,10 @@
     border: #235693 solid 4px;
     float: right;
     position: relative;
-    top: -270px;
+    top: -300px;
     left: 330px;
     margin-bottom: -700px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .intramuralText {
