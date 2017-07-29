@@ -33,10 +33,11 @@ header {
     margin-bottom: 54px;
     position: fixed;
     background-color: rgba(235, 242, 249, .9);
+    box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 a {
-	color: blue;
+	color: #356CBE;
 }
 
 /*
@@ -244,6 +245,7 @@ a {
 	font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Helvetica';
 	background-color: rgb(75, 75, 75);
 	font-size: 26px;
+	box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.2), 0px 4px 20px 0 rgba(0, 0, 0, 0.19), inset 0px 0px 13px 4px rgba(0, 0, 0, 0.2);
 }
 
 #current {
@@ -281,6 +283,7 @@ a {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-left: 5px solid #356cac; /*rgb(255, 207, 129)*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mainText h1 {
@@ -312,6 +315,7 @@ a {
     margin-top: -50px;
     position: relative;
     bottom: 0%;
+    box-shadow: 0px 0px 14px 0 rgba(0, 0, 0, 0.2), 0px 0px 20px 1px rgba(0, 0, 0, 0.19);
 }
 
 #footer p {
