@@ -35,6 +35,10 @@ header {
     background-color: rgba(235, 242, 249, .9);
 }
 
+a {
+	color: blue;
+}
+
 /*
 .everything {
 	/*background-color: rgba(106, 157, 214, .13);
