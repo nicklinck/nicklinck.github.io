@@ -275,14 +275,14 @@ a {
     margin-top: 70px;
     padding-right: 50px;
     max-width: 1200px; 
-    background-color: rgba(106, 157, 214, .4);
+    background-color: #FFFFFF;
     padding-left: 50px;
     padding-bottom: 37px;
     padding-top: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    border-left: 5px solid #356cac; /*rgb(255, 207, 129)*/
+    /*border-left: 5px solid #356cac; rgb(255, 207, 129)*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 

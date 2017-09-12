@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Nick Linck</title>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/blog.css">
+        <link rel="icon" href="../resources/icon.png">
+    </head>
+
+    <header>
+        <div class = "leftHeader">
+            <a href = "../index.html" style = "text-decoration:none">
+                <img id = "circleMe" src = "../resources/circleMe.png"/>
+                <p id = "topName"> Nick Linck </p>
+            </a>
+        </div>
+        <ul class="webLinks">
+            <li><a href="https://www.linkedin.com/in/nick-linck-417b0ba9?trk=hp-identity-name"><img src="../resources/linkedinGray.png" /></a></li>
+            <li><a href="https://github.com/nicklinck"><img src="../resources/gitHubGray.png" /></a></li>
+            <li><a href="https://www.facebook.com/nick.linck"><img src="../resources/facebook.png" /></a></li>
+            <li><a href="https://www.instagram.com/nicklinck/?hl=en"><img src="../resources/instaGray.png"/></a></li>
+        </ul>
+    </header>
+
+
+    <body>
+        <div class="nav">
+            <p><a href="../index.html">Home</a></p>
+            <p><a href="aboutMe.html">About Me</a></p>
+            <p><a href="blog.html" id="current">Blog</a></p>
+            <p><a href="resume.html">Resume</a></p>
+            <p><a href="photos.html">Photos</a></p>
+            <p><a href="mailto:linckn@umich.edu">Contact Me</a></p>                        
+        </div>
+    
+    <div id="blogContainer">
+    <p>
+        <h1>Beginners Guide to RNNs in TensorFlow!</h1>
+        August 27, 2017 | 10 min read <br/><br/>
+
+        <h3>What is a Recurrent Neural Network (RNN)?</h3>
+
+        RNNs are similar to <a href="https://ujjwalkarn.me/2016/08/09/quick-intro-neural-networks/">Feedforward Neural Networks</a>, but a RNN is used to process sequential data, where things that have happened in the past could have an effect on the future. For instance if you want to predict what will be the next word in a sentence, you will want to know which words have already appeared in the sentence. A RNN is able to work with sequential data like this because it has cycles in its computational graph which send information from the "past" to the "future". This way an RNN is able to have a “memory” of what has been seen thus far. This graph is depicted in figure 1.<br/>
+
+        <br/><center><img id="nueron" src="../resources/RNN/real_rnn.png"/></center><br/> 
+
+        <div class="caption"><b>Figure 1:</b> The input comes in through the blue neuron, which is then processed by the hidden orange neuron, which sends output to the green neuron and back to itself. U, W, and V are weight matrices that are used in the computation. They are called input-to-hidden, hidden-to-hidden, and hidden-to-output connections respectively.</div><br/><br/>
+         
+        It is easier to visualize what is happening if we “unroll” this graph. Unrolling simply means to show every computation that will occur when the RNN is ran. In figure 2 you can see an unrolled graph for time steps t-1, t, and t+1 where t is the current time step.<br/>
+    
+        <br/><center><img id="nueron" src="../resources/RNN/unrolled_rnn.png"/></center><br/> 
+        <div class="caption"><b>Figure 2:</b> Unrolled RNN. Some of the output from the hidden neuron h_t-1 is used as input to the hidden neuron at t.</div><br/><br/>
+
+
+        As you can see from the unrolled graph, the weight matrices V, W, and U remain the same throughout every computation. This is known as parameter sharing. At each time step we use the same parameters to compute what the next element in the sequence will be. This allows us to use the model on varying length sequences. In order to understand this, think about the alternative. We would need to have different weight matrices at each time step. With different weight matrices, we would only be able to test on data with the same sequence length. To see this, imagine you wanted to test your RNN on sentences of length 20 but you had only trained your model on sentences of length 15. The last 5 time steps of your RNN would not have been learned so your model would not know what to do for those last 5 time steps. With parameter sharing, while training on sentences of length 15, you learn 3 weight matrices, V, W, and U for every time step. Now when you go to test on sentences of length 20, you will be using those same 3 weight matrices that have been learned in your calculations. <br/><br/>
+
+        Parameter sharing also allows us to recognize patterns in the data when those patterns occur at different time steps. To see this, think about if we used different weight matrices at each time step while trying to predict the next word in a sentence. If we were presented with two examples to learn from, “Alan Turing was a genius.” and “What did Alan Turing do?”, seeing ‘Alan’ then ‘Turing’ in the first sentence would not help us at all in the second sentence when trying to predict which word comes after ‘Alan’. This is because the weight matrices in the 1st and 2nd positions that learned 'Turing' comes after 'Alan' (from the first sentence) would not be used when looking at the words in the 3rd and 4th positions (where 'Alan Turing' appears in the second sentence). However, if the parameters were shared, the positioning of the words in the sentence would not matter. Each transition between words learns the same matrices regardless of positioning in the sentence. Additionaly, parameter sharing means we need to learn less parameters which makes the learning process quicker.<br/><br/>
+
+         
+
+        <i>Mathematically how does an RNN work?</i><br/>
+
+         
+
+        <b>eq 1: </b>a(t) = b + W*h(t−1) + U*x(t) <br/>
+
+        <b>eq 2: </b>h(t) = tanh( a(t) ) <br/>
+
+        <b>eq 3: </b>o(t) = c + V*h(t) <br/>
+
+        <b>eq 4: </b>y(t) = softmax( o(t) ) <br/><br/>
+
+         
+
+        We begin with equation 1 where we use our input from the current time step, x(t), along with the state from the previous hidden layer, h(t-1), to get a(t). b, as well as c in equation 3, is a bias term. <a href="https://stats.stackexchange.com/questions/185911/why-are-bias-nodes-used-in-neural-networks">Why do we need a bias term?</a> In equation 2 we use an activation function, tanh in this example, on a(t) to get the value for our current hidden state, h(t). The tanh function squashes the input to a value between -1 and 1, and it allows for the model to learn non-linear models. <a href="https://medium.com/towards-data-science/activation-functions-and-its-types-which-is-better-a9a5310cc8f">How?</a> In equation 3, we multiply our current hidden state with the hidden-to-output weight matrix, V, to obtain our output, o(t). In equation 4 we take the softmax of the output to obtain normalized probabilities of the output. The softmax function takes a list of numbers and squashes them so that all numbers in the list add up to 1.<br/><br/>
+
+        <i>What are the dimensions of these variables?</i><br/>
+
+        <b>x</b> [<i>n</i> x <i>b</i>]<br/>           
+
+        <b>U</b> [<i>m</i> x <i>n</i>]<br/>   
+
+        <b>h</b> [<i>m</i> x <i>b</i>]<br/>         
+
+        <b>W</b> [<i>m</i> x <i>m</i>]<br/>         
+
+        <b>V</b> [<i>k</i> x <i>m</i>]<br/>    
+
+        <b>o</b> [<i>k</i> x <i>b</i>]<br/> <br/> 
+        <i>n</i> depends on your data. For instance, if your input was <a href="https://machinelearningmastery.com/why-one-hot-encode-data-in-machine-learning/">one hot encoded</a> word vector with a dictionary size of 5,000, your input dimension would be 5,000 (the length of the vector). If your input was just a single number with values ranging from 0 to 10, your input dimension would be 1 (the dimension of a single number). Specifically, n is equal to the number of features in your data. <br/> <br/> 
+
+        <i>b</i> is your <a href="https://stats.stackexchange.com/questions/153531/what-is-batch-size-in-neural-network">batch size</a>.<br/><br/> 
+
+        <i>m</i> is the size of your hidden layer. It can be chosen to be whatever you desire, but a general rule of thumb is to have m be somewhere between the size of your input (n) and the size of your output (k)<br/><br/>  
+
+        <i>k</i> is determined by what type of problem you are solving. If you are solving a classification problem (such as deciding a student's grade, A+, A, A-… ) then k will be the number of classes. If you are solving a regression problem (such as a predicting a student’s GPA), k will be 1.<br/><br/>
+
+        <h3>What is TensorFlow and How does it Work?</h3>
+
+        TensorFlow is an open source framework that runs on Python, Java, and C++. It allows you to easily implement a Neural Network without having to worry about most of the math involved.<br/><br/>
+         
+        <i>What are Tensors?</i><br/>
+
+        Tensors are basically just arrays/vectors/lists of any dimension. All values in TensorFlow are in a tensor. So if you just wanted to represent the value 10, you would have a 1-dimmensional tensor which has the value 10 in it: [10]. <br/><br/>
+         
+        <i>How do you download and run TensorFlow?</i><br/>
+        Go to <a href="https://www.tensorflow.org/install/">TensorFlow's wesbite</a> and follow instructions.<br/><br/>
+
+        <i>What are variables and placeholders?</i><br/>
+
+        In TensorFlow, there are a few main types of tensors that you can create. The two that are important to create an RNN are variables and placeholders. Variables allow for values inside of the tensor to change. The weight matrices will be variable tensors, otherwise how would our model learn?<br/><br/>
+
+        Placeholder tensors are exactly what they sound like. They are a tensor that hold a place in our model which will later be filled with some value that we assign to it. Placeholders are helpful when feeding input into the model. The values of the input will change with each example we run, but the location of the input in our model will be the same for each example.<br/><br/>
+
+         
+        <h3>How do you setup a RNN in TensorFlow?</h3>
+
+        We will first setup our placeholders that will contain values for the input (x) and output (y) of each example. The “None” dimension of these tensors corresponds to the batch size. We will also create two variable tensors that will be used as the weight and bias matrices. These variables are initialized with a “truncated normal” distribution which means that values more than 2 standard deviations away from the mean will be recalculated.<br/>
+
+        <br/><center><img id="vars" src="../resources/RNN/initial_vars.png"/></center><br/> 
+
+        Truncating the weight matrices’ values makes your network learn quicker compared to having many values of the matrices outside the truncated range. If you allowed for values greater than 2 standard deviations away from the mean and used an activation function such as a sigmoid (where the function is basically flat at values greater than 2), then when updating your weights, the gradient will be very small which means it will take much longer for your matrices to learn.<br/><br/>
+ 
+
+        To create the RNN we can use one of the many RNN types of cells that TensorFlow provides. I will use an LSTM (Long Short Term Memory)</a> cell because those have been shown to retain information for a longer period of time. See <a href="https://medium.com/@shiyan/understanding-lstm-and-its-diagrams-37e2f46f1714">here</a> if you want to know more about why this is true. Below is the code for actually setting up the RNN. <br/>
+
+        <br/><center><img class="code" src="../resources/RNN/main_rnn.png"/></center><br/> 
+
+        The input and output had to be unstacked to the correct dimensions that static_rnn accepts [number of time steps x batch size x input dimension]. If you will be working with data where the number of time steps varies for each example, you will want to use <a href="https://www.tensorflow.org/api_docs/python/tf/nn/dynamic_rnn">dynamic_rnn</a> instead of static_rnn. You can avoid unstacking your input if you provide the correct dimensions initially (with my data set it was easier to unstack here). static_rnn() needs these dimensions because it works as follows. <br/>
+        
+        <br/><center><img id="static_rnn" src="../resources/RNN/static_rnn.png"/></center><br/> 
+
+        <h3>How do you run a RNN in TensorFlow?</h3>
+
+        It is important to note that up until this point, the RNN has not been executed. We have simply set up the structure our RNN. In order to make our RNN learn, we must run our RNN on a TensorFlow Session. A session encloses the information necessary for the RNN to be executed. Sess.run() takes in a node of our computation graph (optimizer in this example), and a dictionary that contains any placeholder values that the node is dependent on. <br/>
+
+        <br/><center><img id="run_rnn" src="../resources/RNN/running_rnn.png"/></center><br/> 
+
+        In the example above we are just training our model. To test it, you would simply make another for loop but with test_input rather than training_input and use the same TensorFlow session when evaluating the test_input (because the session contains the RNN information, such as the weight matrices which we have just learned).<br/><br/>
+
+        <h3>What now?</h3>
+
+        I did not use a specific example when making this walk through because I wanted the code to be understandable when you use your own data that may be of a different form or where you only need certain outputs from your model. Use this as an outline to create a RNN to fit your sequential task at hand and please <a href="mailto:linckn@umich.edu">reach out to me</a> with any questions!<br/><br/>       
+
+ 
+
+    </p>
+    </div>
+
+    </body>
+
+    <footer id = "footer">
+        <p> Copyright &copy; 2016 Nick Linck </p>
+    </footer>
+
+</html>
