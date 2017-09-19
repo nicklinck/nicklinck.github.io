@@ -49,12 +49,14 @@
         It is easier to visualize what is happening if we “unroll” this graph. Unrolling simply means to show every computation that will occur when the RNN is ran. In figure 2 you can see an unrolled graph for time steps t-1, t, and t+1 where t is the current time step.<br/>
     
         <br/><center><img id="nueron" src="../resources/RNN/unrolled_rnn.png"/></center><br/> 
-        <div class="caption"><b>Figure 2:</b> Unrolled RNN. Some of the output from the hidden neuron h_t-1 is used as input to the hidden neuron at t.</div><br/><br/>
+        <div class="caption"><b>Figure 2:</b> Unrolled RNN. Some of the output from the hidden neuron h<sub>t-1</sub> is used as input to the hidden neuron at t.</div><br/><br/>
 
 
-        As you can see from the unrolled graph, the weight matrices V, W, and U remain the same throughout every computation. This is known as parameter sharing. At each time step we use the same parameters to compute what the next element in the sequence will be. This allows us to use the model on varying length sequences. In order to understand this, think about the alternative. We would need to have different weight matrices at each time step. With different weight matrices, we would only be able to test on data with the same sequence length. To see this, imagine you wanted to test your RNN on sentences of length 20 but you had only trained your model on sentences of length 15. The last 5 time steps of your RNN would not have been learned so your model would not know what to do for those last 5 time steps. With parameter sharing, while training on sentences of length 15, you learn 3 weight matrices, V, W, and U for every time step. Now when you go to test on sentences of length 20, you will be using those same 3 weight matrices that have been learned in your calculations. <br/><br/>
+        As you can see from the unrolled graph, we use the same weight matrices V, W, and U throughout every computation. This is known as parameter sharing. At each time step we use the same parameters to compute what the next element in the sequence will be. This allows us to use the model on varying length sequences. In order to understand this, think about the alternative. We would need to have different weight matrices at each time step. With different weight matrices, we would only be able to test on data with the same sequence length. To see this, imagine you wanted to test your RNN on sentences of length 20 but you had only trained your model on sentences of length 15. The last 5 time steps of your RNN would not have been learned so your model would not know what to do for those last 5 time steps. With parameter sharing, while training on sentences of length 15, you learn 3 weight matrices, V, W, and U for every time step. Now when you go to test on sentences of length 20, you will be using those same 3 weight matrices that have been learned in your calculations. <br/><br/>
 
-        Parameter sharing also allows us to recognize patterns in the data when those patterns occur at different time steps. To see this, think about if we used different weight matrices at each time step while trying to predict the next word in a sentence. If we were presented with two examples to learn from, “Alan Turing was a genius.” and “What did Alan Turing do?”, seeing ‘Alan’ then ‘Turing’ in the first sentence would not help us at all in the second sentence when trying to predict which word comes after ‘Alan’. This is because the weight matrices in the 1st and 2nd positions that learned 'Turing' comes after 'Alan' (from the first sentence) would not be used when looking at the words in the 3rd and 4th positions (where 'Alan Turing' appears in the second sentence). However, if the parameters were shared, the positioning of the words in the sentence would not matter. Each transition between words learns the same matrices regardless of positioning in the sentence. Additionaly, parameter sharing means we need to learn less parameters which makes the learning process quicker.<br/><br/>
+        Parameter sharing also allows us to recognize patterns in the data when those patterns occur at different time steps. To see this, think if we didn’t have parameter sharing, but instead we used different weight matrices at each time step while trying to predict the next word in a sentence. <br/><br/>
+
+        Example: If we were presented with two examples to learn from, “Alan Turing was a genius.” and “What did Alan Turing do?”, seeing ‘Alan’ then ‘Turing’ in the first sentence would not help us at all in the second sentence when trying to predict which word comes after ‘Alan’. This is because the weight matrices in the 1st and 2nd positions that learned 'Turing' comes after 'Alan' (from the first sentence) would not be used when looking at the words in the 3rd and 4th positions (where 'Alan Turing' appears in the second sentence). However, with parameter sharing, the positioning of the words in the sentence would not matter. Each transition between words learns the same matrices regardless of positioning in the sentence. Additionally, parameter sharing means we need to learn less parameters which makes the learning process quicker.<br/><br/>
 
          
 
@@ -62,17 +64,17 @@
 
          
 
-        <b>eq 1: </b>a(t) = b + W*h(t−1) + U*x(t) <br/>
+        <b>eq 1: </b>a<sub>t</sub> = b + W*h<sub>t−1</sub> + U*x<sub>t</sub> <br/>
 
-        <b>eq 2: </b>h(t) = tanh( a(t) ) <br/>
+        <b>eq 2: </b>h<sub>t</sub> = tanh(a<sub>t</sub>) <br/>
 
-        <b>eq 3: </b>o(t) = c + V*h(t) <br/>
+        <b>eq 3: </b>o<sub>t</sub> = c + V*h<sub>t</sub> <br/>
 
-        <b>eq 4: </b>y(t) = softmax( o(t) ) <br/><br/>
+        <b>eq 4: </b>y<sub>t</sub> = softmax(o<sub>t</sub>) <br/><br/>
 
          
 
-        We begin with equation 1 where we use our input from the current time step, x(t), along with the state from the previous hidden layer, h(t-1), to get a(t). b, as well as c in equation 3, is a bias term. <a href="https://stats.stackexchange.com/questions/185911/why-are-bias-nodes-used-in-neural-networks">Why do we need a bias term?</a> In equation 2 we use an activation function, tanh in this example, on a(t) to get the value for our current hidden state, h(t). The tanh function squashes the input to a value between -1 and 1, and it allows for the model to learn non-linear models. <a href="https://medium.com/towards-data-science/activation-functions-and-its-types-which-is-better-a9a5310cc8f">How?</a> In equation 3, we multiply our current hidden state with the hidden-to-output weight matrix, V, to obtain our output, o(t). In equation 4 we take the softmax of the output to obtain normalized probabilities of the output. The softmax function takes a list of numbers and squashes them so that all numbers in the list add up to 1.<br/><br/>
+        We begin with equation 1 where we use our input from the current time step, x<sub>t</sub>, along with the state from the previous hidden layer, h<sub>t-1</sub>, to get a<sub>t</sub>. b, as well as c in equation 3, is a bias term. <a href="https://stats.stackexchange.com/questions/185911/why-are-bias-nodes-used-in-neural-networks">Why do we need a bias term?</a> In equation 2 we use an activation function, tanh in this example, on a<sub>t</sub> to get the value for our current hidden state, h<sub>t</sub>. The tanh function squashes the input to a value between -1 and 1, and it allows for the model to learn non-linear models. <a href="https://medium.com/towards-data-science/activation-functions-and-its-types-which-is-better-a9a5310cc8f">How?</a> In equation 3, we multiply our current hidden state with the hidden-to-output weight matrix, V, to obtain our output, o<sub>t</sub>. In equation 4 we take the softmax of the output to obtain normalized probabilities of the output. The softmax function takes a list of numbers and squashes them so that all numbers in the list add up to 1.<br/><br/>
 
         <i>What are the dimensions of these variables?</i><br/>
 
