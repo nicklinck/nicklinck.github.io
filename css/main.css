@@ -303,7 +303,11 @@ a {
 }
 
 #blankSpace {
-	height: 150px;
+	height: 73px;
+}
+
+#blankSpace2 {
+	height: 1px;
 }
 
 #footer {
