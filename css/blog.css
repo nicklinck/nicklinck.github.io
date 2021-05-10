@@ -15,6 +15,23 @@
     color: rgb(65, 65, 65);
 }
 
+#blogContainerSmall {
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    padding: 40px;
+    width: 60%;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: rgba(188, 207, 237, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(255,255,255);
+    font-family: 'Avenir Next', Avenir Next, 'Clip', 'sans-serif', 'Avenir', 'Monaco', 'Helvetica';
+    color: rgb(65, 65, 65);
+    text-align: center;
+}
+
 a:link {
     text-decoration: none;
 }
